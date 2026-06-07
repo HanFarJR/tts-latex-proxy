@@ -70,7 +70,7 @@ For Open WebUI, update these environment variables:
   open-webui:
     environment:
       - AUDIO_TTS_ENGINE=openai
-      - AUDIO_TTS_OPENAI_API_BASE_URL=http://tts-proxy:8881/v1    # proxy, not Kokoro directly
+      - AUDIO_TTS_OPENAI_API_BASE_URL=http://tts-proxy:8881/v1    # proxy, not TTS-model directly
       - AUDIO_TTS_OPENAI_API_KEY=not-needed
       - AUDIO_TTS_MODEL=kokoro
       - AUDIO_TTS_VOICE=af_heart
