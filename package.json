@@ -1,0 +1,13 @@
+{
+  "name": "tts-latex-proxy",
+  "version": "1.0.0",
+  "description": "OpenAI-compatible TTS proxy that converts LaTeX and markdown to spoken text before forwarding to TTS-model API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "latex-to-speech": "^0.0.4"
+  }
+}
