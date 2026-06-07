@@ -55,7 +55,7 @@ services:
     ports:
       - "8881:8881"
     environment:
-      - KOKORO_URL=http://kokoro-fastapi:8880    # your TTS backend
+      - TTS_BASE_URL=http://kokoro-fastapi:8880    # your TTS backend
       - PORT=8881
     depends_on:
       - kokoro-fastapi
@@ -87,7 +87,7 @@ You should see the SRE warmup confirmation and then before/after logs for each T
 
 ```
 tts-proxy  | SRE warmup ok — \frac{a}{b} → "a over b"
-tts-proxy  | TTS LaTeX proxy :8881 → http://kokoro-fastapi:8880
+tts-proxy  | TTS LaTeX proxy :8881 → http://TTS_BASE_URL:8880
 tts-proxy  | IN:  Calculation: $P(2 \cup 5) = P(2) + P(5) = \frac{1}{6} + \frac{1}{6} = \frac{2}{6}$ (or $\frac{1}{3}$…
 tts-proxy  | OUT: Calculation: P of open paren 2 union 5 close paren equals P of 2 plus P of 5 equals one sixth plus o…
 ```
@@ -96,7 +96,7 @@ tts-proxy  | OUT: Calculation: P of open paren 2 union 5 close paren equals P of
 
 | Environment variable | Default | Description |
 |---|---|---|
-| `KOKORO_URL` | `http://kokoro-fastapi:8880` | Base URL of your TTS backend (any OpenAI-compatible `/v1/audio/speech` endpoint) |
+| `TTS_BASE_URL` | `http://TTS_BASE_URL:8880` | Base URL of your TTS backend (any OpenAI-compatible `/v1/audio/speech` endpoint) |
 | `PORT` | `8881` | Port the proxy listens on |
 
 ## Compatibility
